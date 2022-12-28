@@ -1,0 +1,54 @@
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px black double;
+}
+
+header h2 {
+    text-transform: uppercase;
+    color: white;
+    background-color: black;
+    margin: 0;
+    padding: 15px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+
+form fieldset:first-of-type div {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    text-align: center;
+}
+
+#submit-btn {
+    width: 100%;
+    background-color: #4ebbb5;
+    color: white;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+
+}
