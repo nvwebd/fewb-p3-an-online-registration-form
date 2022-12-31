@@ -1,7 +1,70 @@
+/*font-family: 'ABeeZee', sans-serif;*/
+/*font-family: 'Roboto', sans-serif;*/
+
 body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'ABeeZee', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #2D3945;
+}
+
+label {
+    font-family: 'Roboto', sans-serif;
+}
+
+select {
+    color: #A8ADB2;
+}
+
+option:not(:first-of-type) {
+    color: black;
+}
+
+input[type="text"] {
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: #EFF0F1;
+    margin-top: 5px;
+    padding: 0 22px;
+    display: flex;
+}
+
+input[type="text"]:focus {
+    outline: 2px solid #46698B;
+}
+
+input::placeholder {
+    color: #ADB2B7;
+}
+
+form fieldset:first-of-type div:nth-child(-n + 3) input::placeholder {
+    text-align: right;
+}
+
+select {
+    height: 50px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #EFF0F1;
+    padding: 0 22px;
+}
+
+select:focus {
+    outline: 2px solid #46698B;
+}
+
+textarea {
+    height: 100px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #EFF0F1;
 }
 
 fieldset {
@@ -11,13 +74,30 @@ fieldset {
 
 header {
     text-align: center;
-    border-bottom: 2px black double;
+}
+
+header div p {
+    color: #AAAFB4;
+}
+
+header hr:first-of-type {
+    height: 2px;
+    background-color: black;
+    width: calc(100% - 30px);
+    margin: 1px auto
+}
+
+header hr:last-of-type {
+    height: 1px;
+    background-color: black;
+    width: calc(100% - 30px);
+    margin: 1px auto;
 }
 
 header h2 {
     text-transform: uppercase;
     color: white;
-    background-color: black;
+    background-color: #2D3945;
     margin: 0;
     padding: 15px;
 }
@@ -26,17 +106,53 @@ main {
     display: flex;
     flex-direction: column;
     padding: 0 10px;
+    justify-content: center;
 }
 
-form fieldset:first-of-type div {
+form fieldset {
     display: flex;
     flex-direction: column;
-    margin: 0;
-    padding: 0;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+form hr {
+    height: 1px;
+    background-color: black;
+}
+
+form fieldset:last-of-type legend {
+    margin-bottom: 8px;
+}
+
+form fieldset:first-of-type div label {
+    color: #55687A;
+}
+
+form fieldset:first-of-type div:last-child {
+    width: 50%;
+}
+
+form fieldset:last-of-type {
+    color: #495D70;
+}
+
+form fieldset:last-of-type div:not(:last-of-type) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 12px;
+}
+
+form fieldset div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 footer {
     text-align: center;
+    margin-bottom: 200px;
 }
 
 #submit-btn {
@@ -47,8 +163,21 @@ footer {
     border: none;
     border-radius: 5px;
     font-weight: bold;
+    height: 60px;
+    margin: 30px auto;
 }
 
 @media screen and (min-width: 768px) {
+    main, header div {
+        max-width: 600px;
+        margin: auto;
+    }
 
+    header hr:first-of-type {
+        width: 100%;
+    }
+
+    header hr:last-of-type {
+        width: 100%;
+    }
 }
