@@ -14,28 +14,27 @@ h1, h2, h3, h4, h5, h6 {
 
 label {
     font-family: 'Roboto', sans-serif;
+    font-style: italic;
 }
 
 select {
-    color: #A8ADB2;
+    color: rgb(154, 158, 173);
 }
 
-option:not(:first-of-type) {
-    color: black;
-}
-
-input[type="text"] {
+input[type="text"], input[type="email"], input[type="tel"] {
     height: 50px;
     border: none;
     border-radius: 5px;
     background-color: #EFF0F1;
     margin-top: 5px;
     padding: 0 22px;
-    display: flex;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, select:focus {
     outline: 2px solid #46698B;
+    color: white;
+    background-color: #495D70;
+    transition: background-color .5s ease-in-out, color .5s ease-in-out;
 }
 
 input::placeholder {
@@ -44,6 +43,7 @@ input::placeholder {
 
 form fieldset:first-of-type div:nth-child(-n + 3) input::placeholder {
     text-align: right;
+    font-style: italic;
 }
 
 select {
@@ -55,16 +55,13 @@ select {
     padding: 0 22px;
 }
 
-select:focus {
-    outline: 2px solid #46698B;
-}
-
 textarea {
     height: 100px;
     margin-top: 5px;
     border: none;
     border-radius: 5px;
     background-color: #EFF0F1;
+    padding: 16px;
 }
 
 fieldset {
@@ -125,11 +122,24 @@ form fieldset:last-of-type legend {
     margin-bottom: 8px;
 }
 
+form fieldset:last-of-type legend h3 {
+    margin-bottom: 8px;
+    text-decoration: underline;
+}
+
+form fieldset:first-of-type {
+
+}
+
+form fieldset:first-of-type legend {
+    text-decoration: underline;
+}
+
 form fieldset:first-of-type div label {
     color: #55687A;
 }
 
-form fieldset:first-of-type div:last-child {
+form fieldset:first-of-type div:last-child input {
     width: 50%;
 }
 
@@ -153,6 +163,7 @@ form fieldset div {
 footer {
     text-align: center;
     margin-bottom: 200px;
+    font-family: 'Roboto', sans-serif;
 }
 
 #submit-btn {
@@ -180,4 +191,25 @@ footer {
     header hr:last-of-type {
         width: 100%;
     }
+
+    form fieldset:first-of-type div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    form fieldset:first-of-type div label, form fieldset:first-of-type div select {
+        flex-basis: 200px;
+    }
+
+    form fieldset:first-of-type div input, form fieldset:first-of-type div select {
+        flex-grow: 1;
+    }
+
+    form fieldset:first-of-type div:last-child input {
+        width: 25%;
+        flex-grow: 0;
+    }
+
 }
