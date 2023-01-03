@@ -1,8 +1,11 @@
 /*font-family: 'ABeeZee', sans-serif;*/
 /*font-family: 'Roboto', sans-serif;*/
 
-body {
+* {
     box-sizing: border-box;
+}
+
+body {
     padding: 0;
     margin: 0;
     font-family: 'ABeeZee', sans-serif;
@@ -41,7 +44,7 @@ input::placeholder {
     color: #ADB2B7;
 }
 
-form fieldset:first-of-type div:nth-child(-n + 3) input::placeholder {
+form fieldset:first-of-type div input::placeholder, #state {
     text-align: right;
     font-style: italic;
 }
